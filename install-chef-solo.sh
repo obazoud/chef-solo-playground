@@ -30,9 +30,3 @@ sudo ruby setup.rb --no-format-executable
 rm -rf /tmp/rubygems-1.8.12
 rm -f /tmp/rubygems-1.8.12.tgz
 
-# Gem mysql
-sudo aptitude --assume-yes --quiet install mysql-client libmysql-ruby libmysqlclient-dev
-sudo gem install mysql
-
-
-
