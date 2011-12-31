@@ -1,5 +1,11 @@
 {
-  "run_list": [
-    "build-essential"
-  ]
+    "java": {
+        "install_flavor": "oracle"
+    },
+
+    "recipes": [
+        "build-essential",
+        "java"
+    ]
 }
+

@@ -77,31 +77,28 @@ action :install do
                              bash ./#{tarball_name} -noregister
                            ]
                                ).run_command
-      unless cmd.exitstatus != 0
-        Chef::Application.fatal!("Failed to extract file #{tarball_name}!")
-      end
+      Chef::Log.info "Cmd existatus: #{cmd.exitstatus}"
+      cmd.error!
     when /^.*\.zip/
       cmd = Chef::ShellOut.new(
                          %Q[ unzip "#{Chef::Config[:file_cache_path]}/#{tarball_name}" -d "#{tmpdir}" ]
                                ).run_command
       unless cmd.exitstatus != 0
-        Chef::Application.fatal!("Failed to extract file #{tarball_name}!")
+        Chef::Application.fatal!("Failed to extract zip file #{tarball_name}!")
       end
     when /^.*\.tar.gz/
       cmd = Chef::ShellOut.new(
                          %Q[ tar xvzf "#{Chef::Config[:file_cache_path]}/#{tarball_name}" -C "#{tmpdir}" ]
                                ).run_command
       unless cmd.exitstatus != 0
-        Chef::Application.fatal!("Failed to extract file #{tarball_name}!")
+        Chef::Application.fatal!("Failed to extract tar.gz file #{tarball_name}!")
       end
     end
 
     cmd = Chef::ShellOut.new(
                        %Q[ mv "#{tmpdir}/#{app_dir_name}" "#{app_dir}" ]
                              ).run_command
-    unless cmd.exitstatus != 0
-        Chef::Application.fatal!(%Q[ Command \' mv "#{tmpdir}/#{app_dir_name}" "#{app_dir}" \' failed ])
-      end
+    cmd.error!
     FileUtils.rm_r tmpdir
     new_resource.updated_by_last_action(true)
   end
@@ -128,9 +125,7 @@ action :install do
                                    %Q[ update-alternatives --install /usr/bin/#{cmd} #{cmd} #{app_home}/bin/#{cmd} 1;
                                        update-alternatives --set #{cmd} #{app_home}/bin/#{cmd}  ]
                                    ).run_command
-          unless cmd.exitstatus != 0
-            Chef::Application.fatal!(%Q[ update alternatives  failed ])
-          end
+          cmd.error!
         end
       end
     end
