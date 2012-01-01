@@ -5,6 +5,7 @@
 
     "recipes": [
         "build-essential",
+        "zsh",
         "git",
         "subversion",
         "java",
