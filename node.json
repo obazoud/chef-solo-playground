@@ -7,6 +7,9 @@
         "revision": "develop",
         "user": "olivier"
     },
+    "eclipse": {
+        "user": "olivier"
+    },
 
     "recipes": [
         "build-essential",
@@ -14,7 +17,8 @@
         "git",
         "subversion",
         "java",
-        "maven"
+        "maven",
+        "eclipse"
     ]
 }
 
