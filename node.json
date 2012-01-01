@@ -5,6 +5,8 @@
 
     "recipes": [
         "build-essential",
+        "git",
+        "subversion",
         "java",
         "maven"
     ]
