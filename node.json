@@ -2,10 +2,15 @@
     "java": {
         "install_flavor": "oracle"
     },
+    "oh_my_zsh": {
+        "repository": "git://github.com/obazoud/oh-my-zsh.git",
+        "revision": "develop",
+        "user": "olivier"
+    },
 
     "recipes": [
         "build-essential",
-        "zsh",
+        "oh-my-zsh",
         "git",
         "subversion",
         "java",
