@@ -1,6 +1,6 @@
 #
 # Cookbook Name:: maven
-# Recipe:: maven3-bin
+# Recipe:: maven3
 #
 # Copyright 2011, Bryan W. Berry (<bryan.berry@gmail.com>)
 #
@@ -18,31 +18,17 @@
 #
 
 include_recipe "java"
+maven_home = node['maven']["m2_home"]
 
-remote_file "/tmp/apache-maven.tar.gz" do
-  source node['maven']['m3_download_url']
-  checksum node['maven']['m3_checksum']
-end
-
-directory node['maven']['m2_home']
-
-bash "install_maven3" do
-  folder_name = node['maven']['m3_download_url'].split('/')[-1].split('-bin.tar.gz')[0]
-  puts folder_name
-  cwd "/tmp"
-  user "root"
-  code <<-EOH
-    tar xvzf apache-maven.tar.gz
-    cp -r #{folder_name}/* #{node['maven']['m2_home']}
-    rm -rf apache-maven.tar.gz #{folder_name}
-  EOH
+java_ark "maven3" do
+  url node['maven']['3']['url']
+  checksum node['maven']['3']['checksum']
+  app_home maven_home
+  bin_cmds ["mvn"]
+  action :install
 end
 
 template "/etc/mavenrc" do
   source "mavenrc.erb"
   mode "0755"
-end
-
-link "/usr/bin/mvn" do
-  to "#{node['maven']['m2_home']}bin/mvn" 
 end
