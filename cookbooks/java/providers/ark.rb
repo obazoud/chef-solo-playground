@@ -77,22 +77,17 @@ action :install do
                              bash ./#{tarball_name} -noregister
                            ]
                                ).run_command
-      Chef::Log.info "Cmd existatus: #{cmd.exitstatus}"
       cmd.error!
     when /^.*\.zip/
       cmd = Chef::ShellOut.new(
                          %Q[ unzip "#{Chef::Config[:file_cache_path]}/#{tarball_name}" -d "#{tmpdir}" ]
                                ).run_command
-      unless cmd.exitstatus != 0
-        Chef::Application.fatal!("Failed to extract zip file #{tarball_name}!")
-      end
+      cmd.error!
     when /^.*\.tar.gz/
       cmd = Chef::ShellOut.new(
                          %Q[ tar xvzf "#{Chef::Config[:file_cache_path]}/#{tarball_name}" -C "#{tmpdir}" ]
                                ).run_command
-      unless cmd.exitstatus != 0
-        Chef::Application.fatal!("Failed to extract tar.gz file #{tarball_name}!")
-      end
+      cmd.error!
     end
 
     cmd = Chef::ShellOut.new(
