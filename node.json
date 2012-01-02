@@ -14,6 +14,7 @@
     "recipes": [
         "build-essential",
         "oh-my-zsh",
+        "openssh",
         "git",
         "subversion",
         "java",
