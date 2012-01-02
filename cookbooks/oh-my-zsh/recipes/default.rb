@@ -13,3 +13,10 @@ git "/home/#{node[:oh_my_zsh][:user]}/.oh-my-zsh" do
     not_if "test -d /home/#{node[:oh_my_zsh][:user]}/.oh-my-zsh"
 end
 
+link "/home/#{node[:oh_my_zsh][:user]}/.zshrc" do
+  owner "#{node[:oh_my_zsh][:user]}"
+  group "#{node[:oh_my_zsh][:user]}"
+  to "/home/#{node[:oh_my_zsh][:user]}/.oh-my-zsh/zshrc"
+  only_if "test -f /home/#{node[:oh_my_zsh][:user]}/.oh-my-zsh/zshrc"
+end
+
