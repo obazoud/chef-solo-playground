@@ -24,6 +24,7 @@
         "openssh",
         "git",
         "subversion",
+        "apache2",
         "mysql::client",
         "mysql::server",
         "java",
