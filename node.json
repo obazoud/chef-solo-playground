@@ -31,6 +31,7 @@
         "maven",
         "eclipse",
         "google-chrome",
+        "virtualbox",
         "main"
     ]
 }
