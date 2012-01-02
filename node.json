@@ -13,6 +13,9 @@
     "eclipse": {
         "user": "olivier"
     },
+    "google-chrome": {
+        "track": "beta"
+    },
 
     "recipes": [
         "build-essential",
@@ -25,7 +28,8 @@
         "mysql::server",
         "java",
         "maven",
-        "eclipse"
+        "eclipse",
+        "google-chrome"
     ]
 }
 
