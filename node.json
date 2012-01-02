@@ -7,6 +7,9 @@
         "revision": "develop",
         "user": "olivier"
     },
+    "mysql": {
+        "server_root_password": "root"
+    },
     "eclipse": {
         "user": "olivier"
     },
@@ -17,6 +20,8 @@
         "openssh",
         "git",
         "subversion",
+        "mysql::client",
+        "mysql::server",
         "java",
         "maven",
         "eclipse"
