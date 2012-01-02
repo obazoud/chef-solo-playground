@@ -16,13 +16,13 @@
 
     "recipes": [
         "build-essential",
+        "vim",
         "oh-my-zsh",
         "openssh",
         "git",
         "subversion",
         "mysql::client",
         "mysql::server",
-        "vim",
         "java",
         "maven",
         "eclipse"

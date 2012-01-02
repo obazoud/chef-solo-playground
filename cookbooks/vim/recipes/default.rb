@@ -17,6 +17,13 @@
 # limitations under the License.
 #
 
+case node[:platform]
+when "ubuntu"
+  package "vim-tiny" do
+    action :purge
+  end
+end
+
 # There is no vim package on RHEL/CentOS derivatives
 # * vim-minimal gives you /bin/vi
 # * vim-enhanced gives you /usr/bin/vim
