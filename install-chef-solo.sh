@@ -1,7 +1,11 @@
 #!/bin/sh
 set -x
 
-wget -qO- https://raw.github.com/obazoud/linux-bootstrap/master/update-ubuntu.sh | sh
+# updating Ubuntu
+sudo apt-get --assume-yes install aptitude
+sudo aptitude --assume-yes --quiet update
+sudo aptitude --assume-yes --quiet safe-upgrade
+sudo aptitude --assume-yes --quiet install python-software-properties openssh-server curl
 
 # http://wiki.opscode.com/display/chef/Installing+Chef+Client+on+Ubuntu+or+Debian
 
