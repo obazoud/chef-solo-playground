@@ -66,6 +66,9 @@ template "#{node['eclipse']['dir']}/eclipse-#{node['eclipse']['version']}/eclips
   mode "0755"
 end
 
+# fix: http://askubuntu.com/questions/66356/gdk-gtk-warnings-and-errors-from-the-command-line
+package "gtk2-engines-pixbuf"
+
 #directory "#{node['eclipse']['dir']}/dropins" do
 #  owner "#{node[:oh_my_zsh][:user]}"
 #  group "#{node[:oh_my_zsh][:user]}"
