@@ -1,0 +1,16 @@
+= DESCRIPTION:
+
+A cookbook that installs and configures ... stuff!
+
+= REQUIREMENTS:
+
+== Platform:
+
+Tested on Ubuntu 11.04.
+
+== Cookbooks:
+
+= ATTRIBUTES:
+
+= USAGE:
+

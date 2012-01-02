@@ -30,7 +30,8 @@
         "java",
         "maven",
         "eclipse",
-        "google-chrome"
+        "google-chrome",
+        "main"
     ]
 }
 
