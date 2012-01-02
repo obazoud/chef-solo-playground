@@ -22,6 +22,7 @@
         "subversion",
         "mysql::client",
         "mysql::server",
+        "vim",
         "java",
         "maven",
         "eclipse"
