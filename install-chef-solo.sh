@@ -5,7 +5,7 @@ set -x
 sudo apt-get --assume-yes install aptitude
 sudo aptitude --assume-yes --quiet update
 sudo aptitude --assume-yes --quiet safe-upgrade
-sudo aptitude --assume-yes --quiet install python-software-properties openssh-server curl
+sudo aptitude --assume-yes --quiet install python-software-properties
 
 # http://wiki.opscode.com/display/chef/Installing+Chef+Client+on+Ubuntu+or+Debian
 
