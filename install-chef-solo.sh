@@ -26,11 +26,12 @@ sudo aptitude --assume-yes --quiet install chef
 sudo aptitude --assume-yes --quiet install ruby ruby-dev libopenssl-ruby rdoc ri irb build-essential wget ssl-cert curl
 
 # RubyGems
+RUBY_GEMS_VERSION="1.8.12"
 cd /tmp
-curl -O http://production.cf.rubygems.org/rubygems/rubygems-1.8.12.tgz
-tar zxf rubygems-1.8.12.tgz
-cd rubygems-1.8.12
+curl -O http://production.cf.rubygems.org/rubygems/rubygems-${RUBY_GEMS_VERSION}.tgz
+tar zxf rubygems-${RUBY_GEMS_VERSION}.tgz
+cd rubygems-${RUBY_GEMS_VERSION}
 sudo ruby setup.rb --no-format-executable
-rm -rf /tmp/rubygems-1.8.12
-rm -f /tmp/rubygems-1.8.12.tgz
+rm -rf /tmp/rubygems-${RUBY_GEMS_VERSION}
+rm -f /tmp/rubygems-${RUBY_GEMS_VERSION}.tgz
 
