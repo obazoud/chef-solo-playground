@@ -28,10 +28,10 @@
 
     "recipes": [
         "build-essential",
+        "git::source",
         "vim",
         "oh-my-zsh",
         "openssh",
-        "git",
         "tig",
         "vimrc",
         "subversion",

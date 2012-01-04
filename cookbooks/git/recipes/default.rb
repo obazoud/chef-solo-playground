@@ -16,15 +16,4 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-case node[:platform]
-when "debian", "ubuntu"
-  package "git-core"
-when "centos","redhat","scientific","fedora"
-  case node[:platform_version].to_i
-  when 5
-    include_recipe "yum::epel"
-  end
-  package "git"
-else
-  package "git"
-end
+include_recipe "git::source"
