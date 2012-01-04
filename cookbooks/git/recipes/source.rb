@@ -5,6 +5,10 @@
 
 include_recipe "build-essential"
 
+package "zliblg-dev"
+package "gettext"
+package "asciidoc"
+
 remote_file "/usr/local/src/git-#{node['git']['source']['version']}.tar.gz" do
   source "#{node['git']['source']['url']}"
   mode "0644"

@@ -8,7 +8,7 @@
         "user": "olivier"
     },
     "vimrc": {
-        "repository": "https://github.com/obazoud/vimrc",
+        "repository": "git://github.com/obazoud/vimrc",
         "revision": "develop",
         "user": "olivier"
     },
