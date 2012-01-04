@@ -1,0 +1,27 @@
+= DESCRIPTION:
+
+Installs Tig from source.
+
+= REQUIREMENTS:
+
+== Platform:
+
+Tested on Ubuntu 11.10. Should work fine on Ubuntu, Centos, Debian, etc.
+
+== Cookbooks:
+
+* build-essential
+* git
+
+= ATTRIBUTES:
+
+* tig[:repository] - git repository to clone
+* tig[:dir] - location where node will be installed, default /usr/local
+* tig[:revision] - branch name to checkout
+
+= USAGE:
+
+Include the tig recipe to install tig from source on your system:
+
+  include_recipe "tig"
+

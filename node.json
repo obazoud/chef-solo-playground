@@ -27,6 +27,7 @@
         "oh-my-zsh",
         "openssh",
         "git",
+        "tig",
         "subversion",
         "apache2",
         "mysql::client",
