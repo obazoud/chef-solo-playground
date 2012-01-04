@@ -1,0 +1,20 @@
+= DESCRIPTION:
+
+A cookbook that installs and configures vimrc!
+
+https://github.com/obazoud/vimrc
+
+= REQUIREMENTS:
+
+== Platform:
+
+Tested on Ubuntu 11.04.
+
+== Cookbooks:
+
+Depends on git and vim.
+
+= ATTRIBUTES:
+
+= USAGE:
+
