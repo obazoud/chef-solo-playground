@@ -5,9 +5,7 @@
 
 include_recipe "build-essential"
 
-package "zliblg-dev"
-package "gettext"
-package "asciidoc"
+package "zlib1g-dev"
 
 remote_file "/usr/local/src/git-#{node['git']['source']['version']}.tar.gz" do
   source "#{node['git']['source']['url']}"
@@ -24,9 +22,9 @@ bash "install git from source" do
   code <<-EOH
     tar zxf git-#{node['git']['source']['version']}.tar.gz && \
     cd git-#{node['git']['source']['version']} && \
+    make configure && \
     ./configure --prefix=#{node['git']['source']['prefix']} && \
-    make all doc && \
-    make install install-doc install-html
+    make man install install-doc
   EOH
 end
 
