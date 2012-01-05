@@ -6,6 +6,7 @@
 include_recipe "build-essential"
 
 package "zlib1g-dev"
+package "asciidoc"
 
 remote_file "/usr/local/src/git-#{node['git']['source']['version']}.tar.gz" do
   source "#{node['git']['source']['url']}"
