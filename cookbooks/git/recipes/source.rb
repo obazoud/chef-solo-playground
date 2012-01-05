@@ -5,8 +5,14 @@
 
 include_recipe "build-essential"
 
-package "zlib1g-dev"
-package "asciidoc"
+# http://progit.org/book/ch1-4.html
+#package "asciidoc"
+package "libcurl4-gnuutils"
+package "libexpat1-dev"
+package "gettext"
+package "libz-dev"
+package "libssl-dev"
+
 
 remote_file "/usr/local/src/git-#{node['git']['source']['version']}.tar.gz" do
   source "#{node['git']['source']['url']}"
@@ -17,15 +23,22 @@ remote_file "/usr/local/src/git-#{node['git']['source']['version']}.tar.gz" do
   not_if {File.exists?("/usr/local/src/git-#{node['git']['source']['version']}.tar.gz")}
 end
 
-bash "install git from source" do
+bash "untar git source" do
   cwd "/usr/local/src"
   user "root"
   code <<-EOH
     tar zxf git-#{node['git']['source']['version']}.tar.gz && \
-    cd git-#{node['git']['source']['version']} && \
-    make configure && \
-    ./configure --prefix=#{node['git']['source']['prefix']} && \
-    make man install install-doc
+  EOH
+  not_if {File.directory?("/usr/local/src/git-#{node['git']['source']['version']}/")}
+end
+
+bash "install git from source" do
+  cwd "/usr/local/src/git-#{node['git']['source']['version']}"
+  user "root"
+  code <<-EOH
+    ./configure --prefix=#{node['git']['source']['prefix']} --with-curl --with-expat && \
+    make && \
+    make install
   EOH
 end
 
