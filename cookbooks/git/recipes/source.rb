@@ -30,7 +30,7 @@ bash "untar git source" do
   cwd "/usr/local/src"
   user "root"
   code <<-EOH
-    tar zxf git-#{node['git']['source']['version']}.tar.gz && \
+    tar zxf git-#{node['git']['source']['version']}.tar.gz
   EOH
   not_if {File.directory?("/usr/local/src/git-#{node['git']['source']['version']}/")}
 end
