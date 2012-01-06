@@ -10,7 +10,7 @@ when "debian", "ubuntu"
   bash "install git dependencies" do
     user "root"
     code <<-EOH
-      apt-get build-dep git-core
+      apt-get build-dep git-core -y -q
     EOH
   end
 else
