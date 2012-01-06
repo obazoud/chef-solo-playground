@@ -5,14 +5,17 @@
 
 include_recipe "build-essential"
 
-# http://progit.org/book/ch1-4.html
-#package "asciidoc"
-package "libcurl4-gnuutils"
-package "libexpat1-dev"
-package "gettext"
-package "libz-dev"
-package "libssl-dev"
-
+case node[:platform]
+when "debian", "ubuntu"
+  bash "install git dependencies" do
+    user "root"
+    code <<-EOH
+      apt-get build-dep git-core
+    EOH
+  end
+else
+  log "This platform is not yet supported."
+end
 
 remote_file "/usr/local/src/git-#{node['git']['source']['version']}.tar.gz" do
   source "#{node['git']['source']['url']}"
