@@ -6,7 +6,7 @@
 # main
 package "nautilus-dropbox"
 
-package "skype"
+#package "skype"
 
 package "gimp"
 
