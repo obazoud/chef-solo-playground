@@ -7,8 +7,8 @@
 default['eclipse']['dir']       = "/opt/eclipse"
 default['eclipse']['version']   = "3.7.1"
 default['eclipse']['user']      = 'user'
-default['eclipse']['url']       = "http://ftp.heanet.ie/pub/eclipse//technology/epp/downloads/release/indigo/SR1/eclipse-java-indigo-SR1-linux-gtk-x86_64.tar.gz"
-default['eclipse']['checksum']  = "6bac43e274dbc3cf2ecb8fa6e53ca6847846a5b5"
+default['eclipse']['url']       = "http://eclipse.ialto.com/technology/epp/downloads/release/indigo/SR2/eclipse-java-indigo-SR2-linux-gtk-x86_64.tar.gz"
+default['eclipse']['checksum']  = "2a7e4e642a8579fa9e6cb936f064291c"
 
 # Plugins settings
 #default['eclipse']['plugins'] = []
