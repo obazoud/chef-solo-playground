@@ -21,10 +21,6 @@
     "google-chrome": {
         "track": "beta"
     },
-    "nodejs": {
-        "version": "0.6.6",
-        "npm": "1.0.106"
-    },
 
     "recipes": [
         "build-essential",
@@ -43,8 +39,7 @@
         "eclipse",
         "google-chrome",
         "virtualbox",
-        "nodejs",
-        "nodejs::npm",
+        "nvm",
         "main"
     ]
 }

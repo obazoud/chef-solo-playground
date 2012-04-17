@@ -1,0 +1,20 @@
+= DESCRIPTION:
+
+A cookbook that installs and configures nvm
+
+https://github.com/creationix/nvm
+
+= REQUIREMENTS:
+
+== Platform:
+
+Tested on Ubuntu 11.04.
+
+== Cookbooks:
+
+Depends on git and zsh.
+
+= ATTRIBUTES:
+
+= USAGE:
+
