@@ -3,8 +3,8 @@
 # Attributes:: source
 #
 
-default['git']['source']['version']        = "1.7.8.2"
+default['git']['source']['version']        = "1.7.10"
 default['git']['source']['prefix']         = "/usr/local"
 default['git']['source']['url']            = "http://git-core.googlecode.com/files/git-#{node['git']['source']['version']}.tar.gz"
-default['git']['source']['checksum']       = "7187c1af96db0c181b801957d6e152ec7cd60ab6"
+default['git']['source']['checksum']       = "501ee8685c148d377950e42c111e01d83fd1d41a"
 
