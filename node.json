@@ -35,7 +35,7 @@
         "mysql::client",
         "mysql::server",
         "java",
-        "maven",
+        "maven::maven3",
         "eclipse",
         "google-chrome",
         "virtualbox",

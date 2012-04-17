@@ -19,7 +19,8 @@ Attributes
 ==========
 
 * default['maven']['version']  defaults to 2
-* default['maven']['m2_home']  defaults to  '/usr/local/maven/'
+* default['maven']['m2_home']  defaults to  '/usr/local/maven/', note
+that maven3 uses "m2_home" not "m3_home"
 * default['maven']['m2_download_url']  the download url for maven2
 * default['maven']['m2_checksum']  the checksum, which you will have
  to recalculate if you change the download url
@@ -42,7 +43,7 @@ License and Author
 
 Author:: Bryan W. Berry (<bryan.berry@gmail.com>)
 
-Copyright 2010, Bryan W. Berry
+Copyright 2011, Bryan W. Berry
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.

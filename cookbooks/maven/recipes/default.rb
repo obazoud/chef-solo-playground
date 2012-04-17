@@ -19,4 +19,4 @@
 
 include_recipe "java"
 
-include_recipe "maven::maven3"
+include_recipe "maven::maven2"
