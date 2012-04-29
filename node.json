@@ -1,6 +1,18 @@
 {
     "java": {
-        "install_flavor": "oracle"
+        "install_flavor": "oracle",
+	      "jdk": {
+	        "6": {
+	          "x86_64": {
+	            "url": "http://dl.dropbox.com/u/6139471/jdk-7u4-linux-x64.tar.gz"
+	           }
+	        },
+          "7": {
+            "x86_64": {
+              "url": "http://dl.dropbox.com/u/6139471/jdk-7u4-linux-x64.tar.gz"
+            }
+          }
+        }
     },
     "oh_my_zsh": {
         "repository": "git://github.com/obazoud/oh-my-zsh.git",
