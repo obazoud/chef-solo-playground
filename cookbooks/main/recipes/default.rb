@@ -19,6 +19,9 @@ package "dos2unix"
 package "gedit"
 
 package "elinks"
+package "wget"
+package "curl"
+package "tree"
 
 # ubuntu scrollbars
 package "overlay-scrollbar" do
