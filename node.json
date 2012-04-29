@@ -39,7 +39,6 @@
         "mysql::server",
         "java",
         "maven::maven3",
-        "eclipse",
         "google-chrome",
         "virtualbox",
         "nvm",
