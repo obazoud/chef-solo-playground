@@ -22,6 +22,7 @@ package "elinks"
 package "wget"
 package "curl"
 package "tree"
+package "gconf-editor"
 
 # ubuntu scrollbars
 package "overlay-scrollbar" do
