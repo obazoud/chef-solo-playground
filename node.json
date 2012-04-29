@@ -15,9 +15,6 @@
     "mysql": {
         "server_root_password": "root"
     },
-    "eclipse": {
-        "user": "olivier"
-    },
     "nvm": {
         "user": "olivier"
     },
