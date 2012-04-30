@@ -23,6 +23,9 @@ package "wget"
 package "curl"
 package "tree"
 package "gconf-editor"
+package "ubuntu-restricted-extras"
+package "gparted"
+package "filezilla"
 
 # ubuntu scrollbars
 package "overlay-scrollbar" do
