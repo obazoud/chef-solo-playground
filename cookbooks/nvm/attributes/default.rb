@@ -1,8 +1,8 @@
 # Author:: Olivier Bazoud (<olivier.bazoud@gmail.com>)
 # Apache 2.0 license
-# Cookbook Name:: mvn
+# Cookbook Name:: nvm
 # Attributes:: default
 
-default['oh_my_zsh']['repository'] = 'git://github.com/creationix/nvm.git'
-default['oh_my_zsh']['revision'] = 'master'
-default['oh_my_zsh']['user'] = 'user'
+default['nvm']['repository'] = 'git://github.com/creationix/nvm.git'
+default['nvm']['revision'] = 'master'
+default['nvm']['user'] = 'user'
