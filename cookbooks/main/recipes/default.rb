@@ -4,20 +4,17 @@
 #
 
 # main
+package "libssl-dev"
+
 package "nautilus-dropbox"
-
 #package "skype"
-
 package "gimp"
 
+package "gedit"
 package "dconf-tools"
 package "nautilus-open-terminal"
-
 package "tofrodos"
 package "dos2unix"
-
-package "gedit"
-
 package "elinks"
 package "wget"
 package "curl"
