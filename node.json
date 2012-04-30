@@ -24,6 +24,9 @@
         "revision": "develop",
         "user": "olivier"
     },
+    "idea": {
+        "user": "olivier"
+    },
     "mysql": {
         "server_root_password": "root"
     },
@@ -48,6 +51,7 @@
         "mysql::server",
         "java",
         "maven::maven3",
+        "idea",
         "google-chrome",
         "virtualbox",
         "nvm",

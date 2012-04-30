@@ -1,0 +1,40 @@
+#
+# Cookbook Name:: eclipse
+# Recipe:: default
+#
+# eclipse.ini template
+#
+# see http://stackoverflow.com/questions/142357/what-are-the-best-jvm-settings-for-eclipse
+#
+
+-startup
+plugins/org.eclipse.equinox.launcher_1.2.0.v20110502.jar
+--launcher.library
+plugins/org.eclipse.equinox.launcher.gtk.linux.x86_64_1.1.100.v20110505
+-product
+org.eclipse.epp.package.java.product
+--launcher.defaultAction
+openFile
+-showsplash
+org.eclipse.platform
+--launcher.XXMaxPermSize
+256m
+--launcher.defaultAction
+openFile
+-vmargs
+-Dosgi.requiredJavaVersion=1.6
+-Declipse.p2.unsignedPolicy=allow
+-Xms128m
+-Xmx384m
+-Xss4m
+-XX:PermSize=128m
+-XX:MaxPermSize=384m
+-XX:CompileThreshold=5
+-XX:MaxGCPauseMillis=10
+-XX:MaxHeapFreeRatio=70
+-XX:+CMSIncrementalPacing
+-XX:+UnlockExperimentalVMOptions
+-XX:+UseG1GC
+-XX:+UseFastAccessorMethods
+-Dcom.sun.management.jmxremote
+-Dorg.Eclipse.equinox.p2.reconciler.dropins.directory=<%= node['eclipse']['dir'] %>/dropins
