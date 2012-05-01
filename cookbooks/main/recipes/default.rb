@@ -23,6 +23,7 @@ package "gconf-editor"
 package "ubuntu-restricted-extras"
 package "gparted"
 package "filezilla"
+package "colordiff"
 
 # ubuntu scrollbars
 package "overlay-scrollbar" do
