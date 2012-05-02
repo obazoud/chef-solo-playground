@@ -25,6 +25,6 @@ end
 execute "tar xzf #{node['idea']['dir']}/idea-#{node['idea']['version']}.tar.gz -C #{node['idea']['dir']} --owner #{node[:idea][:user]}" do
   user "#{node[:idea][:user]}"
   group "#{node[:idea][:user]}"
-  not_if {File.directory?("#{node['idea']['dir']}/idea-#{node['idea']['version']}/")}
+  not_if {File.directory?("#{node['idea']['dir']}/#{node['idea']['folder']}/")}
 end
 
