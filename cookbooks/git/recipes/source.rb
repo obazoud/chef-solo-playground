@@ -43,5 +43,6 @@ bash "install git from source" do
     make && \
     make install
   EOH
+  not_if "git --version 2>&1 | grep -q \"git version #{node['git']['source']['version']}\""
 end
 
