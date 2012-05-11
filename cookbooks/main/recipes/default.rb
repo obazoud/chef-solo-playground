@@ -9,7 +9,7 @@ package "libssl-dev"
 package "nautilus-dropbox"
 #package "skype"
 package "gimp"
-
+package "screen"
 package "gedit"
 package "dconf-tools"
 package "nautilus-open-terminal"
