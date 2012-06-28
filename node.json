@@ -34,7 +34,9 @@
         "user": "olivier"
     },
     "mysql": {
-        "server_root_password": "root"
+        "server_root_password": "root",
+        "server_root_password": "root",
+        "server_repl_password": "root"
     },
     "nvm": {
         "user": "olivier"
@@ -52,15 +54,14 @@
         "tig",
         "subversion",
         "apache2",
-        "mysql::client",
-        "mysql::server",
         "java",
         "maven::maven3",
         "idea",
         "google-chrome",
         "virtualbox",
         "nvm",
-        "main"
+        "main",
+        "mysql::server"
     ]
 }
 
