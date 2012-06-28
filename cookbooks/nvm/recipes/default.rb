@@ -4,7 +4,7 @@
 include_recipe "git"
 include_recipe "zsh"
 
-git "/home/#{node[:nvm][:user]}/nvm" do
+git "/home/#{node[:nvm][:user]}/.nvm" do
     repository "#{node[:nvm][:repository]}"
     revision "#{node[:nvm][:revision]}"
     user "#{node[:nvm][:user]}"
