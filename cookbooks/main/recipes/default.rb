@@ -6,8 +6,6 @@
 # main
 package "libssl-dev"
 
-package "nautilus-dropbox"
-#package "skype"
 package "gimp"
 package "screen"
 package "gedit"
