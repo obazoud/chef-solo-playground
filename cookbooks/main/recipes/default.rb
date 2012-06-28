@@ -23,15 +23,15 @@ package "gparted"
 package "filezilla"
 package "colordiff"
 
-include_recipe "apt"
-
-apt_repository "sublime-text-2" do
-  uri "http://ppa.launchpad.net/webupd8team/sublime-text-2/ubuntu"
-  distribution node['lsb']['codename']
-  components ["main"]
-  action :add
-end
-package "sublime-text-2-dev"
+#include_recipe "apt"
+#
+#apt_repository "sublime-text-2" do
+#  uri "http://ppa.launchpad.net/webupd8team/sublime-text-2/ubuntu"
+#  distribution node['lsb']['codename']
+#  components ["main"]
+#  action :add
+#end
+#package "sublime-text-2-dev"
 
 # ubuntu scrollbars
 package "overlay-scrollbar" do
