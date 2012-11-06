@@ -39,7 +39,7 @@ bash "install git from source" do
   cwd "/usr/local/src/git-#{node['git']['source']['version']}"
   user "root"
   code <<-EOH
-    ./configure --prefix=#{node['git']['source']['prefix']} --with-curl --with-expat && \
+    ./configure --prefix=#{node['git']['source']['prefix']} --with-curl=/usr/bin --with-expat && \
     make && \
     make install
   EOH
