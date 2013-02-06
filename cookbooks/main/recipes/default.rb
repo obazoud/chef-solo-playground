@@ -22,6 +22,7 @@ package "ubuntu-restricted-extras"
 package "gparted"
 package "filezilla"
 package "colordiff"
+package "nfs-common"
 
 #include_recipe "apt"
 #
